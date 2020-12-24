@@ -1,3 +1,10 @@
+<%@page import="java.io.IOException"%>
+<%@page import="java.io.InputStream"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.io.InputStreamReader"%>
+<%@page import="java.io.BufferedReader"%>
+<%@page import="java.io.FileInputStream"%>
+<%@page import="controller.QuanLiCauHoi"%>
 <%@page import="controller.CauHoi"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -22,8 +29,41 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
-	<% 
-		List<CauHoi> getAllListCauHoi = (List<CauHoi>) request.getAttribute("getAllListCauHoi");
+	
+	<%
+	String fileName = "/WEB-INF/cauhoi.txt";
+	List<CauHoi> getAllListCauHoi = new ArrayList<CauHoi>();
+
+	InputStream fileInputStream = null;
+	BufferedReader bufferedReader = null;
+	InputStream ins = application.getResourceAsStream(fileName);
+	try {
+		if (ins == null) {
+			response.setStatus(response.SC_NOT_FOUND);
+		} else {
+			BufferedReader br = new BufferedReader((new InputStreamReader(ins)));
+			String line = br.readLine();
+			String content = "";
+			while (line != null) {
+				content += line;
+				line = br.readLine();
+			}
+			String arrContent[] = content.split("dt1408end2410dt");
+			int id = 1;
+			for (String s : arrContent) {
+				String[] objarr = s.split("dt14082410dt");
+				CauHoi cauHoi = new CauHoi(objarr[0], objarr[1], objarr[3], objarr[4], objarr[5], objarr[6],
+						objarr[7], objarr[8], Integer.parseInt(objarr[2]));
+				cauHoi.setId(id);
+				getAllListCauHoi.add(cauHoi);
+				id++;
+			}
+		}
+	} catch (IOException e) {
+		out.println(e.getMessage());
+	}
+	
+%>
 	%>
   <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -62,7 +102,29 @@
   </div>
 </nav>
 	<% 
-		List<CauHoi> getListCauHoiTheoChuong = (List<CauHoi>) request.getAttribute("getListCauHoiTheoChuong");
+	String b = (String) request.getAttribute("book");
+	String ch = (String) request.getAttribute("chapter");
+	List<CauHoi> getListCauHoiTheoChuong = new ArrayList<CauHoi>();
+		if(b != null && ch !=null) {
+		
+		
+			for(CauHoi cauhoi : getAllListCauHoi) {
+				
+				if(cauhoi.getBook().equalsIgnoreCase(b) && cauhoi.getChapter().equalsIgnoreCase(ch)) {
+					getListCauHoiTheoChuong.add(cauhoi);
+				}
+			}
+		} else {
+			List<Integer> random30question = QuanLiCauHoi.random30question(getAllListCauHoi.size());
+			for(Integer in : random30question) {
+				for(CauHoi cauhoi : getAllListCauHoi) {
+					if(in == cauhoi.getId()) {
+						getListCauHoiTheoChuong.add(cauhoi);
+						break;
+					}
+				}
+			}
+		}
 	%>
 	<div class="container">
 			<% 

@@ -44,45 +44,21 @@ public class QuanLiCauHoi extends HttpServlet {
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/view/themcauhoi.jsp");
 			rd.forward(request, response);
 		} else if (url.startsWith(request.getContextPath() + "/trangchu")) {
-			List<CauHoi> getAllListCauHoi = getAllListCauHoi(request);
 			
-			request.setAttribute("getAllListCauHoi", getAllListCauHoi);
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/view/trangchu.jsp");
 			rd.forward(request, response);
 		} else if (url.startsWith(request.getContextPath() + "/lambaitheochuong")) {
-			List<CauHoi> getAllListCauHoi = getAllListCauHoi(request);
 			
 			String book = request.getParameter("book");
 			String chapter = request.getParameter("chapter");
-			List<CauHoi> getListCauHoiTheoChuong = new ArrayList<CauHoi>();
 			
-			for(CauHoi cauhoi : getAllListCauHoi) {
-				
-				if(cauhoi.getBook().equalsIgnoreCase(book) && cauhoi.getChapter().equalsIgnoreCase(chapter)) {
-					getListCauHoiTheoChuong.add(cauhoi);
-				}
-			}
-			request.setAttribute("getAllListCauHoi", getAllListCauHoi);
-			request.setAttribute("getListCauHoiTheoChuong", getListCauHoiTheoChuong);
+			
+			request.setAttribute("book", book);
+			request.setAttribute("chapter", chapter);
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/view/lambai.jsp");
 			rd.forward(request, response);
 		} else if (url.startsWith(request.getContextPath() + "/thithu")) {
-			List<CauHoi> getAllListCauHoi = getAllListCauHoi(request);
 			
-			
-			List<CauHoi> getListCauHoiTheoChuong = new ArrayList<CauHoi>();
-			List<Integer> random30question = random30question(getAllListCauHoi.size());
-			for(Integer in : random30question) {
-				for(CauHoi cauhoi : getAllListCauHoi) {
-					if(in == cauhoi.getId()) {
-						getListCauHoiTheoChuong.add(cauhoi);
-						break;
-					}
-				}
-			}
-			
-			request.setAttribute("getAllListCauHoi", getAllListCauHoi);
-			request.setAttribute("getListCauHoiTheoChuong", getListCauHoiTheoChuong);
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/view/lambai.jsp");
 			rd.forward(request, response);
 		} else {
@@ -176,7 +152,7 @@ public class QuanLiCauHoi extends HttpServlet {
 		return cauhoi;
 	}
 	
-	private List<Integer> random30question(int totalQuestion) {
+	public static List<Integer> random30question(int totalQuestion) {
 		Random rd = new Random();
 		List<Integer> arr = new ArrayList<Integer>();
 		
@@ -200,6 +176,11 @@ public class QuanLiCauHoi extends HttpServlet {
 			}
 		}
 		return arr;
+	}
+	
+	public static void main(String[] args) {
+		File f = new File("src/main/webapp/cauhoi/cauhoi.txt");
+		System.out.println(f.exists());
 	}
 	
 }
