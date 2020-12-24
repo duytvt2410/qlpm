@@ -154,7 +154,7 @@
 				  </label>
 				</div>
 				<br>
-				<h6 class="text-danger" id="kq_<%=stt%>" style="display: none"></h6>
+				<h6 id="kq_<%=stt%>" style="color:red; display: none"></h6>
 				<br>
 			<% 
 				ketqua += cauhoi.getResult() + "dt14082410dt";
@@ -189,6 +189,10 @@
 			for(var i = 0; i < len; i++) {
 				if(ketquadung[i] == arrDapancuaban[i]) {
 					socaudung++;
+					var id = '#kq_' + (i + 1);
+					$(id).text("-> Đúng");
+					$(id).css("color", "#1cdb1c");
+					$(id).css("display", "block");
 				} else {
 					var id = '#kq_' + (i + 1);
 					$(id).text("-> Đáp án đúng là " + ketquadung[i]);
