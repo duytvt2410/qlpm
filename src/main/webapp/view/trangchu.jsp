@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>QLPM 2020</title>
+<title>QLDA 2020</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,7 +31,7 @@
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
 		<!-- Brand -->
 		<a class="navbar-brand"
-			href="<%=request.getContextPath() + "/trangchu"%>">Ontap qlpm</a>
+			href="<%=request.getContextPath() + "/trangchu"%>">Ontap qlda</a>
 
 		<!-- Toggler/collapsibe Button -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse"

@@ -19,6 +19,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  	@media only screen and (max-width: 600px) {
+  		h5 {font-size: 13px}
+  		.form-check-label {font-size: 13px}
+  	}
+  </style>
 </head>
 <body>
  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -132,25 +138,25 @@
 				String ketqua = "";
 				for(CauHoi cauhoi : getListCauHoiTheoChuong) { 
 			%>
-				<h5><%=stt + ". " + cauhoi.getQuestion()%></h5>
+				<h5 style="color: #104f93"><%=stt + ". " + cauhoi.getQuestion()%></h5>
 				<div class="form-check">
 				  <label class="form-check-label">
-				    <input type="radio" class="form-check-input" value="A" name="optradio_<%=stt%>">A. <%= cauhoi.getAnswerA() %>
+				    <input type="radio" class="form-check-input" value="A" name="optradio_<%=stt%>"><strong>A.</strong> <%= cauhoi.getAnswerA() %>
 				  </label>
 				</div>
 				<div class="form-check">
 				  <label class="form-check-label">
-				    <input type="radio" class="form-check-input" value="B" name="optradio_<%=stt%>">B. <%= cauhoi.getAnswerB() %>
+				    <input type="radio" class="form-check-input" value="B" name="optradio_<%=stt%>"><strong>B.</strong> <%= cauhoi.getAnswerB() %>
 				  </label>
 				</div>
 				<div class="form-check">
 				  <label class="form-check-label">
-				    <input type="radio" class="form-check-input" value="C" name="optradio_<%=stt%>">C. <%= cauhoi.getAnswerC() %>
+				    <input type="radio" class="form-check-input" value="C" name="optradio_<%=stt%>"><strong>C.</strong> <%= cauhoi.getAnswerC() %>
 				  </label>
 				</div>
 				<div class="form-check">
 				  <label class="form-check-label">
-				    <input type="radio" class="form-check-input" value="D" name="optradio_<%=stt%>">D. <%= cauhoi.getAnswerD() %>
+				    <input type="radio" class="form-check-input" value="D" name="optradio_<%=stt%>"><strong>D.</strong> <%= cauhoi.getAnswerD() %>
 				  </label>
 				</div>
 				<br>
