@@ -30,6 +30,7 @@
   	@media only screen and (max-width: 600px) {
   		h5 {font-size: 13px}
   		p {font-size: 11px}
+		i {font-size: 8px}
   	}
   </style>
 </head>
