@@ -26,6 +26,12 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+  	@media only screen and (max-width: 600px) {
+  		h5 {font-size: 13px}
+  		p {font-size: 11px}
+  	}
+  </style>
 </head>
 <body>
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -110,8 +116,29 @@
 			</ul>
 		</div>
 	</nav>
-	<img src="<%=request.getContextPath() + "/qlmp cau hoi.jpg"%>">
-	<small style="position: absolute; bottom: 0; right: 0">Được
-		viết bởi Huỳnh Khương Duy</small>
+	<div class="container">
+		<div class ="col-md-12">
+			<h5 class="text-danger">I. Giới thiệu:</h5>
+			<p>- Chạy mượt</p>
+			<p>- Thỉnh thoảng có lỗi chữ, sai chính tả (do coppy kiểm tra chưa kỹ)</p>
+			<p>- Giao diện xấu do mắt thẩm mỹ kém.</p>
+			<p>- Source code: <a target="blank" href="https://github.com/duytvt2410/qlpm">https://github.com/duytvt2410/qlpm</a><br>
+			Bạn có thể tải về ròi edit theo ý thích nha. Góp ý tui sửa cũng đc.</p>
+			<i>- Được viết bởi Huỳnh Khương Duy.</i>
+			<h5 class="text-danger">II. Lưu ý:</h5>
+			<p>- Các bạn nên check kỹ đáp án nếu thấy có sai thì góp ý cho mình sửa lại <a target="blank" href="https://www.facebook.com/profile.php?id=100015140282975">FB của mình</a>.</p>
+			<p>- Câu <span class="text-danger">15</span> chương <span class="text-danger">Project Management Frameword</span> của cuốn sánh <span class="text-danger">Rita PMP</span>
+				đáp án chính xác là <strong>B</strong>... ban đầu là A
+			</p>
+		</div>
+		<div class ="col-md-12">
+		<h5 class="text-danger">III. Nội dung:</h5>
+		</div>
+		
+		<div class="col-md-12" >
+			<img width="100%" src="<%=request.getContextPath() + "/qlmp cau hoi.jpg"%>">
+		</div>
+	</div>
+	
 </body>
 </html>
