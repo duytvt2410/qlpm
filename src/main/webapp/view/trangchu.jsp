@@ -1,4 +1,4 @@
-<%@page import="java.io.IOException"%>
+﻿<%@page import="java.io.IOException"%>
 <%@page import="java.io.InputStream"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.io.InputStreamReader"%>
@@ -128,7 +128,7 @@
 			<h5 class="text-danger">II. Lưu ý:</h5>
 			<p>- Các bạn nên check kỹ đáp án nếu thấy có sai thì góp ý cho mình sửa lại <a target="blank" href="https://www.facebook.com/profile.php?id=100015140282975">FB của mình</a>.</p>
 			<p>- Câu <span class="text-danger">15</span> chương <span class="text-danger">Project Management Frameword</span> của cuốn sánh <span class="text-danger">Rita PMP</span>
-				đáp án chính xác là <strong>B</strong>... ban đầu là A
+				đáp án chính xác là <strong>B</strong>... ban đầu mình ghi nhầm là A
 			</p>
 		</div>
 		<div class ="col-md-12">
