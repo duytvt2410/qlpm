@@ -128,10 +128,17 @@
 			<i>- Được viết bởi Huỳnh Khương Duy.</i>
 			<h5 class="text-danger">II. Lưu ý:</h5>
 			<p>- Các bạn nên check kỹ đáp án nếu thấy có sai thì góp ý cho mình sửa lại <a target="blank" href="https://www.facebook.com/profile.php?id=100015140282975">FB của mình</a>.</p>
-			<p>- Câu <span class="text-danger">15</span> chương <span class="text-danger">Project Management Frameword</span> của cuốn sánh <span class="text-danger">Rita PMP</span>
-				đáp án chính xác là <strong>B</strong>... ban đầu mình ghi nhầm là A
+			<i class="text-warning">Fix:</i>
+			<p>- Câu <span class="text-danger">15</span> chương <span class="text-danger">Project Management Framework</span> của cuốn sánh <span class="text-danger">Rita PMP</span>
+				đáp án trong sách là <strong>B</strong>... Nhưng mình thấy có nét ghi đè là <strong>A</strong> và phần giải thích cũng có liên quan đến câu <strong>A</strong>. Nên mình để đáp án là A
 			</p>
-		</div>
+			<img width="100%" src="<%=request.getContextPath() + "/cau15framewok.png"%>">
+			<p>- Câu <span class="text-danger">15</span> chương <span class="text-danger">Scope Management</span> của cuốn sánh <span class="text-danger">Rita PMP</span>
+				đáp án chính xác là <strong>C</strong>... Ban đầu mình ghi nhầm là <strong>A</strong>
+			</p>
+			<p>- Mình vừa cập nhật câu hỏi cho chương <span class="text-danger">Domain 1</span> của cuốn sánh <span class="text-danger">PMI-ACP</span> do nhìn nhầm là 2 chương <strong>Domain 1 </strong>
+			và <strong>Domain 2</strong> giống nhau.
+			</p>
 		<div class ="col-md-12">
 		<h5 class="text-danger">III. Nội dung:</h5>
 		</div>
