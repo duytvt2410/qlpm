@@ -420,7 +420,7 @@ project manager to do?dt14082410dtGet more people involved in the Identify Risks
 Rita PMPdt14082410dtRisk Managementdt14082410dt38dt14082410dtA watch list is an output of which risk management process?dt14082410dtPlan Risk Responsesdt14082410dtPerform Quantitative Risk Analysisdt14082410dtPerform Qualitative Risk Analysisdt14082410dtImplement Risk Responsesdt14082410dtCdt1408end2410dt
 Rita PMPdt14082410dtRisk Managementdt14082410dt38dt14082410dtDuring the Identify Risks process, a project manager and stakeholders used various methods to
 identify risks and created a long list of those risks. The project manager then made sure all the risks
-wenâ?¢ understood and that triggers had been identified. Later, in the Plan Risk Responses process, he
+were understood and that triggers had been identified. Later, in the Plan Risk Responses process, he
 took all the risks identified by the stakeholders and determined lo mitigate them. What has he
 done wrong?dt14082410dtThe project manager should have waited until the Perform Qualitative Risk Analysis process to get the the stakeholders involved.dt14082410dtMore people should have been involved in the Plan Risk Responses processdt14082410dtThe project manager should have created workaroundsdt14082410dtTriggers should not be identified until the Implement Risk Response processdt14082410dtBdt1408end2410dt
 Rita PMPdt14082410dtRisk Managementdt14082410dt38dt14082410dtSince a template for team meetings docs not appear to be available, you are creating one. You think it

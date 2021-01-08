@@ -20,13 +20,44 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <style type="text/css">
+ #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #d26158;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 2px;
+}
+
+.arrow-up {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+#myBtn:hover {
+  background-color: #fd6d61;
+}
+  
   	@media only screen and (max-width: 600px) {
   		h5 {font-size: 13px}
   		.form-check-label {font-size: 13px}
+  		#myBtn{right:10px; padding: 5px 10px}
   	}
   </style>
 </head>
 <body>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="arrow-up"></i></button>
  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <!-- Brand -->
   <a class="navbar-brand" href="<%=request.getContextPath() + "/trangchu"%>">Ontap qlda</a>
@@ -180,6 +211,27 @@
 			 
 	</div>
 	<script type="text/javascript">
+	//Get the button
+	var mybutton = document.getElementById("myBtn");
+
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	    mybutton.style.display = "block";
+	  } else {
+	    mybutton.style.display = "none";
+	  }
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+	
+	
 		function xemketqua() {
 			var tongsocau = '<%=stt - 1%>';
 			var len = parseInt(tongsocau);
