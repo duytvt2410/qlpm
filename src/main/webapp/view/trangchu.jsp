@@ -31,6 +31,7 @@
   		h5 {font-size: 13px}
   		p {font-size: 11px}
 		i {font-size: 8px}
+		h6 {font-size: 11px}
   	}
   </style>
 </head>
@@ -128,7 +129,7 @@
 			<i>- Được viết bởi Huỳnh Khương Duy.</i>
 			<h5 class="text-danger">II. Lưu ý:</h5>
 			<p>- Các bạn nên check kỹ đáp án nếu thấy có sai thì góp ý cho mình sửa lại <a target="blank" href="https://www.facebook.com/profile.php?id=100015140282975">FB của mình</a>.</p>
-			<i class="text-warning">Fix:</i>
+			<h6 class="text-warning">Fix:</h6>
 			<p>- Câu <span class="text-danger">15</span> chương <span class="text-danger">Project Management Framework</span> của cuốn sánh <span class="text-danger">Rita PMP</span>
 				đáp án trong sách là <strong>B</strong>... Nhưng mình thấy có nét ghi đè là <strong>A</strong> và phần giải thích cũng có liên quan đến câu <strong>A</strong>. Nên mình để đáp án là A
 			</p>
