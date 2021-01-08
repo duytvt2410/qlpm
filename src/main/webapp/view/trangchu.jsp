@@ -120,13 +120,11 @@
 	</nav>
 	<div class="container">
 		<div class ="col-md-12">
-			<h5 class="text-danger">I. Giới thiệu:</h5>
-			<p>- Chạy mượt</p>
-			<p>- Thỉnh thoảng có lỗi chữ, sai chính tả (do coppy kiểm tra chưa kỹ)</p>
-			<p>- Giao diện xấu do mắt thẩm mỹ kém.</p>
-			<p>- Source code: <a target="blank" href="https://github.com/duytvt2410/qlpm">https://github.com/duytvt2410/qlpm</a><br>
-			Bạn có thể tải về ròi edit theo ý thích nha. Góp ý tui sửa cũng đc.</p>
-			<i>- Được viết bởi Huỳnh Khương Duy.</i>
+			<h5 class="text-danger">I. Nội dung:</h5>
+			<img width="100%" src="<%=request.getContextPath() + "/qlmp cau hoi.jpg"%>">
+			<p>- <strong class="text-danger">Lưu ý: </strong>Đề thi 40 câu lận nhen. Web này chỉ giúp các bạn ôn được 30 câu thôi. 10 câu ở ngoài thì chịu.<p>
+
+
 			<h5 class="text-danger">II. Lưu ý:</h5>
 			<p>- Các bạn nên check kỹ đáp án nếu thấy có sai thì góp ý cho mình sửa lại <a target="blank" href="https://www.facebook.com/profile.php?id=100015140282975">FB của mình</a>.</p>
 			<h6 class="text-warning">Fix:</h6>
@@ -140,13 +138,16 @@
 			<p>- Mình vừa cập nhật câu hỏi cho chương <span class="text-danger">Domain 1</span> của cuốn sánh <span class="text-danger">PMI-ACP</span> do nhìn nhầm là 2 chương <strong>Domain 1 </strong>
 			và <strong>Domain 2</strong> giống nhau.
 			</p>
-		<div class ="col-md-12">
-		<h5 class="text-danger">III. Nội dung:</h5>
-		</div>
-		
-		<div class="col-md-12" >
-			<img width="100%" src="<%=request.getContextPath() + "/qlmp cau hoi.jpg"%>">
-		</div>
+
+			<h5 class="text-danger">III. Giới thiệu:</h5>
+			<p>- Chạy mượt</p>
+			<p>- Thỉnh thoảng có lỗi chữ, sai chính tả (do coppy kiểm tra chưa kỹ)</p>
+			<p>- Giao diện xấu do mắt thẩm mỹ kém.</p>
+			<p>- Source code: <a target="blank" href="https://github.com/duytvt2410/qlpm">https://github.com/duytvt2410/qlpm</a><br>
+			Bạn có thể tải về ròi edit theo ý thích nha. Góp ý tui sửa cũng đc.</p>
+			<i>- Được viết bởi Huỳnh Khương Duy.</i>
+			
+			
 	</div>
 	
 </body>
