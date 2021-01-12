@@ -115,6 +115,13 @@
 				<li class="nav-item"><a class="nav-link"
 					href="<%=request.getContextPath() + "/thithu"%>">Thi thử ngẫu
 						nhiên 30 câu</a></li>
+						
+						<li class="nav-item">
+		        <a class="nav-link" href="<%=request.getContextPath() +"/thithutheosach?book=Rita"%>">Thi thử ngẫu nhiên 30 câu sách Rita PMP</a>
+	</li>
+	<li class="nav-item">
+		        <a class="nav-link" href="<%=request.getContextPath() +"/thithutheosach?book=PMI"%>">Thi thử ngẫu nhiên 30 câu sách PMI-ACP</a>
+	</li>
 			</ul>
 		</div>
 	</nav>
@@ -137,6 +144,9 @@
 			</p>
 			<p>- Mình vừa cập nhật câu hỏi cho chương <span class="text-danger">Domain 1</span> của cuốn sánh <span class="text-danger">PMI-ACP</span> do nhìn nhầm là 2 chương <strong>Domain 1 </strong>
 			và <strong>Domain 2</strong> giống nhau.
+			</p>
+			<p>- Câu <span class="text-danger">18</span> chương <span class="text-danger">Domain 7</span> của cuốn sánh <span class="text-danger">PMI-ACP</span>
+				đáp án chính xác là <strong>B</strong>... Ban đầu mình ghi nhầm là <strong>D</strong>
 			</p>
 
 			<h5 class="text-danger">III. Giới thiệu:</h5>

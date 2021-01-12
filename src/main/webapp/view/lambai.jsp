@@ -135,12 +135,19 @@
      <li class="nav-item">
 		        <a class="nav-link" href="<%=request.getContextPath() +"/thithu"%>">Thi thử ngẫu nhiên 30 câu</a>
 	</li>
+	<li class="nav-item">
+		        <a class="nav-link" href="<%=request.getContextPath() +"/thithutheosach?book=Rita"%>">Thi thử ngẫu nhiên 30 câu sách Rita PMP</a>
+	</li>
+	<li class="nav-item">
+		        <a class="nav-link" href="<%=request.getContextPath() +"/thithutheosach?book=PMI"%>">Thi thử ngẫu nhiên 30 câu sách PMI-ACP</a>
+	</li>
     </ul>
   </div>
 </nav>
 	<% 
 	String b = (String) request.getAttribute("book");
 	String ch = (String) request.getAttribute("chapter");
+	String sach = (String) request.getAttribute("sach");
 	List<CauHoi> getListCauHoiTheoChuong = new ArrayList<CauHoi>();
 		if(b != null && ch !=null) {
 		
@@ -151,8 +158,30 @@
 					getListCauHoiTheoChuong.add(cauhoi);
 				}
 			}
+		} else if (sach != null) {
+			if(sach.equals("Rita")) {
+				List<Integer> random30question = QuanLiCauHoi.random30question(1, 156);
+				for(Integer in : random30question) {
+					for(CauHoi cauhoi : getAllListCauHoi) {
+						if(in == cauhoi.getId()) {
+							getListCauHoiTheoChuong.add(cauhoi);
+							break;
+						}
+					}
+				}
+			} else {
+				List<Integer> random30question = QuanLiCauHoi.random30question(157, 256);
+				for(Integer in : random30question) {
+					for(CauHoi cauhoi : getAllListCauHoi) {
+						if(in == cauhoi.getId()) {
+							getListCauHoiTheoChuong.add(cauhoi);
+							break;
+						}
+					}
+				}
+			}
 		} else {
-			List<Integer> random30question = QuanLiCauHoi.random30question(getAllListCauHoi.size());
+			List<Integer> random30question = QuanLiCauHoi.random30question(1, getAllListCauHoi.size());
 			for(Integer in : random30question) {
 				for(CauHoi cauhoi : getAllListCauHoi) {
 					if(in == cauhoi.getId()) {

@@ -8,8 +8,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
@@ -20,7 +18,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = { "/themcauhoi", "/luucauhoi" , "/trangchu", "/lambaitheochuong", "/thithu"})
+@WebServlet(urlPatterns = { "/themcauhoi", "/luucauhoi" , "/trangchu", "/lambaitheochuong", "/thithu", "/thithutheosach"})
 public class QuanLiCauHoi extends HttpServlet {
 	/**
 	 * 
@@ -59,6 +57,11 @@ public class QuanLiCauHoi extends HttpServlet {
 			rd.forward(request, response);
 		} else if (url.startsWith(request.getContextPath() + "/thithu")) {
 			
+			RequestDispatcher rd = getServletContext().getRequestDispatcher("/view/lambai.jsp");
+			rd.forward(request, response);
+		} else if (url.startsWith(request.getContextPath() + "/thithutheosach")) {
+			String book = request.getParameter("book");
+			request.setAttribute("sach", book);
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/view/lambai.jsp");
 			rd.forward(request, response);
 		} else {
@@ -152,12 +155,12 @@ public class QuanLiCauHoi extends HttpServlet {
 		return cauhoi;
 	}
 	
-	public static List<Integer> random30question(int totalQuestion) {
+	public static List<Integer> random30question(int min, int max) {
 		Random rd = new Random();
 		List<Integer> arr = new ArrayList<Integer>();
 		
 		for(int i = 0; i < 30; i++) {
-			int x = rd.nextInt(totalQuestion) + 1;
+			int x = rd.nextInt(max - min) + min;
 			boolean c = false;
 			while(!c) {
 				boolean isExist = false;
@@ -171,7 +174,7 @@ public class QuanLiCauHoi extends HttpServlet {
 					arr.add(x);
 					c = true;
 				} else {
-					x = rd.nextInt(totalQuestion) + 1;
+					x = rd.nextInt(max - min) + min;
 				}
 			}
 		}
