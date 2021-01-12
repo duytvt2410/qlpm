@@ -55,16 +55,16 @@ public class QuanLiCauHoi extends HttpServlet {
 			request.setAttribute("chapter", chapter);
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/view/lambai.jsp");
 			rd.forward(request, response);
-		} else if (url.startsWith(request.getContextPath() + "/thithu")) {
-			
-			RequestDispatcher rd = getServletContext().getRequestDispatcher("/view/lambai.jsp");
-			rd.forward(request, response);
 		} else if (url.startsWith(request.getContextPath() + "/thithutheosach")) {
 			String book = request.getParameter("book");
 			request.setAttribute("sach", book);
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/view/lambai.jsp");
 			rd.forward(request, response);
-		} else {
+		} else if (url.startsWith(request.getContextPath() + "/thithu")) {
+			
+			RequestDispatcher rd = getServletContext().getRequestDispatcher("/view/lambai.jsp");
+			rd.forward(request, response);
+		}  else {
 			response.sendRedirect(request.getContextPath() + "/themcauhoi");
 		}
 
@@ -182,8 +182,7 @@ public class QuanLiCauHoi extends HttpServlet {
 	}
 	
 	public static void main(String[] args) {
-		File f = new File("src/main/webapp/cauhoi/cauhoi.txt");
-		System.out.println(f.exists());
+		List<Integer> ls = random30question(157, 256);
+		System.out.println(ls);
 	}
-	
 }
